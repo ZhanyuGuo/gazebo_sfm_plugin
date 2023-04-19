@@ -1,5 +1,4 @@
 <!-- Usage notes are located in this file, look for "Usage"-->
-<?xml version="1.0" ?>
 <sdf version="1.5">
   <world name="default">
     <gui>
@@ -144,8 +143,6 @@
       </plugin>
     </actor>
 
-	
-
     <actor name="actor3">
       <pose>-1 0 1.25 0 0 0</pose>
       <skin>
@@ -157,7 +154,8 @@
         <scale>1.000000</scale>
         <interpolate_x>true</interpolate_x>
       </animation>
-      <!--<plugin name="actor3_plugin" filename="libActorPlugin.so">
+      <!--<plugin
+      name="actor3_plugin" filename="libActorPlugin.so">
         <target>3 2 1.24</target>
         <target_weight>1.15</target_weight>
         <obstacle_weight>1.8</obstacle_weight>
@@ -168,12 +166,11 @@
         </ignore_obstacles>
       </plugin>-->
     </actor>
-    
-    
-    <actor name="actor4">
+
+    <!-- <actor name="actor4">
       <pose>3 0 1.25 0 0 0</pose>
       <skin>
-        <filename>walk-green.dae</filename> 
+        <filename>walk-green.dae</filename>
         <scale>1.0</scale>
       </skin>
       <animation name="walking">
@@ -189,7 +186,7 @@
         <people_distance>6.0</people_distance>
         <goal_weight>2.0</goal_weight>
         <obstacle_weight>80.0</obstacle_weight>
-        <social_weight>15.0</social_weight> 
+        <social_weight>15.0</social_weight>
         <group_gaze_weight>3.0</group_gaze_weight>
         <group_coh_weight>2.0</group_coh_weight>
         <group_rep_weight>1.0</group_rep_weight>
@@ -203,12 +200,12 @@
           <waypoint>-3 0 1.25</waypoint>
         </trajectory>
       </plugin>
-    </actor>
+    </actor> -->
 
-    <!--<actor name="actor4">
+    <actor name="actor4">
       <pose>3 0 1.25 0 0 0</pose>
       <skin>
-        <filename>walk.dae</filename> 
+        <filename>walk.dae</filename>
         <scale>1.0</scale>
       </skin>
       <animation name="walking">
@@ -224,12 +221,12 @@
         <people_distance>6.0</people_distance>
         <goal_weight>2.0</goal_weight>
         <obstacle_weight>80.0</obstacle_weight>
-        <social_weight>15.0</social_weight> 
+        <social_weight>15.0</social_weight>
         <group_gaze_weight>3.0</group_gaze_weight>
         <group_coh_weight>2.0</group_coh_weight>
         <group_rep_weight>1.0</group_rep_weight>
         <group>
-            <model>actor5</model>
+          <model>actor5</model>
         </group>
         <ignore_obstacles>
           <model>cafe</model>
@@ -246,7 +243,7 @@
     <actor name="actor5">
       <pose>3 0.8 1.25 0 0 0</pose>
       <skin>
-        <filename>walk.dae</filename> 
+        <filename>walk.dae</filename>
         <scale>1.0</scale>
       </skin>
       <animation name="walking">
@@ -262,14 +259,14 @@
         <people_distance>6.0</people_distance>
         <goal_weight>2.0</goal_weight>
         <obstacle_weight>80.0</obstacle_weight>
-        <social_weight>15.0</social_weight> 
+        <social_weight>15.0</social_weight>
         <group_gaze_weight>3.0</group_gaze_weight>
         <group_coh_weight>2.0</group_coh_weight>
         <group_rep_weight>1.0</group_rep_weight>
         <group>
-            <model>actor4</model>
+          <model>actor4</model>
         </group>
-        <ignore_obstacles> 
+        <ignore_obstacles>
           <model>cafe</model>
           <model>ground_plane</model>
         </ignore_obstacles>
@@ -279,7 +276,77 @@
           <waypoint>-3 0.8 1.25</waypoint>
         </trajectory>
       </plugin>
-    </actor>-->
+    </actor>
+
+    <actor name="actor6">
+      <pose>-1 -7 1.25 0 0 0</pose>
+      <skin>
+        <filename>walk-blue.dae</filename> <!--run.dae-->
+        <scale>1.0</scale>
+      </skin>
+      <animation name="walking">
+        <filename>walk-blue.dae</filename>
+        <scale>1.000000</scale>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+
+      <plugin name="actor6_plugin" filename="libPedestrianSFMPlugin.so">
+        <velocity>1.2</velocity>
+        <radius>0.4</radius>
+        <animation_factor>5.1</animation_factor>
+        <people_distance>6.0</people_distance>
+        <goal_weight>2.0</goal_weight>
+        <obstacle_weight>80.0</obstacle_weight>
+        <social_weight>15.0</social_weight> <!--2.1-->
+        <group_gaze_weight>3.0</group_gaze_weight>
+        <group_coh_weight>2.0</group_coh_weight>
+        <group_rep_weight>1.0</group_rep_weight>
+        <ignore_obstacles>
+          <model>cafe</model>
+          <model>ground_plane</model>
+        </ignore_obstacles>
+        <trajectory>
+          <cyclic>true</cyclic>
+          <waypoint>-1 -7 1.25</waypoint>
+          <waypoint>-1 2 1.25</waypoint>
+        </trajectory>
+      </plugin>
+    </actor>
+
+    <actor name="actor7">
+      <pose>-1 -6 1.25 0 0 0</pose>
+      <skin>
+        <filename>walk-blue.dae</filename> <!--run.dae-->
+        <scale>1.0</scale>
+      </skin>
+      <animation name="walking">
+        <filename>walk-blue.dae</filename>
+        <scale>1.000000</scale>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+
+      <plugin name="actor7_plugin" filename="libPedestrianSFMPlugin.so">
+        <velocity>1.2</velocity>
+        <radius>0.4</radius>
+        <animation_factor>5.1</animation_factor>
+        <people_distance>6.0</people_distance>
+        <goal_weight>2.0</goal_weight>
+        <obstacle_weight>80.0</obstacle_weight>
+        <social_weight>15.0</social_weight> <!--2.1-->
+        <group_gaze_weight>3.0</group_gaze_weight>
+        <group_coh_weight>2.0</group_coh_weight>
+        <group_rep_weight>1.0</group_rep_weight>
+        <ignore_obstacles>
+          <model>cafe</model>
+          <model>ground_plane</model>
+        </ignore_obstacles>
+        <trajectory>
+          <cyclic>true</cyclic>
+          <waypoint>-1 -6 1.25</waypoint>
+          <waypoint>-1 2 1.25</waypoint>
+        </trajectory>
+      </plugin>
+    </actor>
 
   </world>
 </sdf>
